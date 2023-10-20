@@ -1,0 +1,1654 @@
+{
+	"info": {
+		"_postman_id": "1e809893-9f18-4c8e-b6d3-6d71dbe6b70d",
+		"name": "Examin_Api_Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29528268"
+	},
+	"item": [
+		{
+			"name": "iduser1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iiiiduser1\",pm.response.json().id);\r",
+							"pm.environment.set(\"uuuuser1\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"uuuuuser1@gmail.com\",\r\n \"ROLES\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "iduser2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iduser2\",pm.response.json().id);\r",
+							"pm.environment.set(\"user2\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user2@gmail.com\",\r\n \r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user get role admin Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"votrre_adresse_email\",\r\n  \"roles\": [\"votre_rôle\"],\r\n  \"password\": \"votre_mot_de_passe\",\r\n  \"firstname\": \"votre_prénom\",\r\n  \"lastname\": \"votre_nom\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"isVerified\": true\r\n  \r\n   \r\n \r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/users",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/errors/500"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<https://127.0.0.1:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Debug-Token",
+							"value": "f8c343"
+						},
+						{
+							"key": "X-Debug-Token-Link",
+							"value": "https://127.0.0.1:8000/_profiler/f8c343"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "X-Previous-Debug-Token",
+							"value": "4039c5"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"An error occurred\",\n    \"detail\": \"Session was used while the request was declared stateless.\",\n    \"status\": 500,\n    \"type\": \"/errors/500\",\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\WrappedListener.php\",\n            \"line\": 116,\n            \"function\": \"onKernelResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\EventListener\\\\AbstractSessionListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 220,\n            \"function\": \"__invoke\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\WrappedListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 56,\n            \"function\": \"callListeners\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\TraceableEventDispatcher.php\",\n            \"line\": 139,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 215,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\TraceableEventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 203,\n            \"function\": \"filterResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 76,\n            \"function\": \"handleRaw\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\Kernel.php\",\n            \"line\": 197,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner.php\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\autoload_runtime.php\",\n            \"line\": 29,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\public\\\\index.php\",\n            \"line\": 5,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "iduser3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iduser3\", pm.response.json().id);\r",
+							"pm.environment.set(\"user3\", pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Uuuuser3@gmail.com\",\r\n \r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user get role admin Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"votrre_adresse_email\",\r\n  \"roles\": [\"votre_rôle\"],\r\n  \"password\": \"votre_mot_de_passe\",\r\n  \"firstname\": \"votre_prénom\",\r\n  \"lastname\": \"votre_nom\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"isVerified\": true\r\n  \r\n   \r\n \r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/users",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/errors/500"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<https://127.0.0.1:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Debug-Token",
+							"value": "f8c343"
+						},
+						{
+							"key": "X-Debug-Token-Link",
+							"value": "https://127.0.0.1:8000/_profiler/f8c343"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "X-Previous-Debug-Token",
+							"value": "4039c5"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"An error occurred\",\n    \"detail\": \"Session was used while the request was declared stateless.\",\n    \"status\": 500,\n    \"type\": \"/errors/500\",\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\WrappedListener.php\",\n            \"line\": 116,\n            \"function\": \"onKernelResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\EventListener\\\\AbstractSessionListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 220,\n            \"function\": \"__invoke\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\WrappedListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 56,\n            \"function\": \"callListeners\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\TraceableEventDispatcher.php\",\n            \"line\": 139,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 215,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\TraceableEventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 203,\n            \"function\": \"filterResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 76,\n            \"function\": \"handleRaw\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\Kernel.php\",\n            \"line\": 197,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner.php\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\autoload_runtime.php\",\n            \"line\": 29,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\public\\\\index.php\",\n            \"line\": 5,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "iduser4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iduser4\", pm.response.json().id);\r",
+							"pm.environment.set(\"user4\", pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"uuser4@gmail.com\",\r\n \r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user get role admin Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"votrre_adresse_email\",\r\n  \"roles\": [\"votre_rôle\"],\r\n  \"password\": \"votre_mot_de_passe\",\r\n  \"firstname\": \"votre_prénom\",\r\n  \"lastname\": \"votre_nom\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"isVerified\": true\r\n  \r\n   \r\n \r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/users",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/errors/500"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<https://127.0.0.1:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Debug-Token",
+							"value": "f8c343"
+						},
+						{
+							"key": "X-Debug-Token-Link",
+							"value": "https://127.0.0.1:8000/_profiler/f8c343"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "X-Previous-Debug-Token",
+							"value": "4039c5"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"An error occurred\",\n    \"detail\": \"Session was used while the request was declared stateless.\",\n    \"status\": 500,\n    \"type\": \"/errors/500\",\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\WrappedListener.php\",\n            \"line\": 116,\n            \"function\": \"onKernelResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\EventListener\\\\AbstractSessionListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 220,\n            \"function\": \"__invoke\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\WrappedListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 56,\n            \"function\": \"callListeners\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\TraceableEventDispatcher.php\",\n            \"line\": 139,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 215,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\TraceableEventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 203,\n            \"function\": \"filterResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 76,\n            \"function\": \"handleRaw\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\Kernel.php\",\n            \"line\": 197,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner.php\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\autoload_runtime.php\",\n            \"line\": 29,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\public\\\\index.php\",\n            \"line\": 5,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "iduser5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iduser5\", pm.response.json().id);\r",
+							"pm.environment.set(\"user5\", pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"uuser5@gmail.com\",\r\n \r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"string\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user get role admin Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"votrre_adresse_email\",\r\n  \"roles\": [\"votre_rôle\"],\r\n  \"password\": \"votre_mot_de_passe\",\r\n  \"firstname\": \"votre_prénom\",\r\n  \"lastname\": \"votre_nom\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"isVerified\": true\r\n  \r\n   \r\n \r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8000/api/users",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/errors/500"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 20 Oct 2023 08:45:30 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<https://127.0.0.1:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Debug-Token",
+							"value": "f8c343"
+						},
+						{
+							"key": "X-Debug-Token-Link",
+							"value": "https://127.0.0.1:8000/_profiler/f8c343"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "X-Previous-Debug-Token",
+							"value": "4039c5"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"An error occurred\",\n    \"detail\": \"Session was used while the request was declared stateless.\",\n    \"status\": 500,\n    \"type\": \"/errors/500\",\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\WrappedListener.php\",\n            \"line\": 116,\n            \"function\": \"onKernelResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\EventListener\\\\AbstractSessionListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 220,\n            \"function\": \"__invoke\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\WrappedListener\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\EventDispatcher.php\",\n            \"line\": 56,\n            \"function\": \"callListeners\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\event-dispatcher\\\\Debug\\\\TraceableEventDispatcher.php\",\n            \"line\": 139,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\EventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 215,\n            \"function\": \"dispatch\",\n            \"class\": \"Symfony\\\\Component\\\\EventDispatcher\\\\Debug\\\\TraceableEventDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 203,\n            \"function\": \"filterResponse\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\HttpKernel.php\",\n            \"line\": 76,\n            \"function\": \"handleRaw\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\http-kernel\\\\Kernel.php\",\n            \"line\": 197,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\HttpKernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\symfony\\\\runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner.php\",\n            \"line\": 35,\n            \"function\": \"handle\",\n            \"class\": \"Symfony\\\\Component\\\\HttpKernel\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\vendor\\\\autoload_runtime.php\",\n            \"line\": 29,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Runtime\\\\Runner\\\\Symfony\\\\HttpKernelRunner\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\HP\\\\Documents\\\\EXAMEN\\\\video_center_prenom\\\\public\\\\index.php\",\n            \"line\": 5,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "LOGIN user2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"tokenuser2\",pm.response.json().token);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc2MTMyNTYsImV4cCI6MTY5NzYxNjg1Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsZXR0ZWVlQGdtYWlsLmJlIn0.3gLea_91z_tj1rpDwScgi40q-TFDOW-62qiXC7iVsdaGls5uxfu05s84awbfy1dJNaUqq95xTWrdmttrxYrhT5ZXfSjpyeC5yp7ieaUB1fY-C3i8OdbfzU52ya-FfrYa3CH9w1z45o6SePLmBBp-67Bvp0clqQiJAntaO5lwfpFlAVSCY4mSZUPkGpkd2XUjgDbG4QNeZfxWnV05yRe6fj0vKnSYIPai5oSpzCzmTuElxUUJnrR7bs6hJdWX0poCUEvJnEb3KyakfxDSaJW1DqoUXZAj6wRjhDnID7pvY1O0tHyMr2ngLfemvY0p5op06SaLwaoEQMc3KQFwFaOuyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"username\":\"user2@gmail.com\",\r\n  \"password\": \"user\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/login_check",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF USERSTOKENADMIN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token1}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF USERS2token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenuser2}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users/",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTQ0MjQsImV4cCI6MTY5Nzc5ODAyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.dpDk_L3YmJC8JwR2DQZeatHcl-PeDx8z4uL8--ad4hxnQAHNj8KJvq85T7GxCkU_TtIO_oMxdnKQGQ2P56A8BjtDlKUinl9Iqery1F7RvoTB9P675_AsROihT1d91IeoD3IG2M3cpyZmiBHLDqdznCViMK1hhRG0uduLDDMiTm6lr0qVKYe5s4EevEEekvtmXaiy9D2JCzbAQSfEy3FSkSTAl19VXiehDoYpUS8nIeYZuhtqUTm_sE5_4gMOu0XAfTWu7HPQw2gTwYI1Fb-DzKhEkfRYIVaC3J86wHtmPbEIh-gy5vSq9QcpaQ_uk7ZW8xIteLgxciX0D6KJ8OdSpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"title\": \"video\",\r\n//   \"videoLink\": \"https://www.video.com/video\",\r\n//   \"description\": \"vidéo\",\r\n//   \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n//   \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n//   \"user\": \"/api/users/29\"\r\n// }\r\n"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "video1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"pm.environment.set(\"video1\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTQ0MjQsImV4cCI6MTY5Nzc5ODAyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.dpDk_L3YmJC8JwR2DQZeatHcl-PeDx8z4uL8--ad4hxnQAHNj8KJvq85T7GxCkU_TtIO_oMxdnKQGQ2P56A8BjtDlKUinl9Iqery1F7RvoTB9P675_AsROihT1d91IeoD3IG2M3cpyZmiBHLDqdznCViMK1hhRG0uduLDDMiTm6lr0qVKYe5s4EevEEekvtmXaiy9D2JCzbAQSfEy3FSkSTAl19VXiehDoYpUS8nIeYZuhtqUTm_sE5_4gMOu0XAfTWu7HPQw2gTwYI1Fb-DzKhEkfRYIVaC3J86wHtmPbEIh-gy5vSq9QcpaQ_uk7ZW8xIteLgxciX0D6KJ8OdSpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"video\",\r\n  \"videoLink\": \"https://www.video.com/video\",\r\n  \"description\": \"vidéo\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"user\": \"/api/users/29\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "video2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idvideo2\",pm.response.json().id);\r",
+							"pm.environment.set(\"video2\",pm.response.json().videoIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTQ0MjQsImV4cCI6MTY5Nzc5ODAyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.dpDk_L3YmJC8JwR2DQZeatHcl-PeDx8z4uL8--ad4hxnQAHNj8KJvq85T7GxCkU_TtIO_oMxdnKQGQ2P56A8BjtDlKUinl9Iqery1F7RvoTB9P675_AsROihT1d91IeoD3IG2M3cpyZmiBHLDqdznCViMK1hhRG0uduLDDMiTm6lr0qVKYe5s4EevEEekvtmXaiy9D2JCzbAQSfEy3FSkSTAl19VXiehDoYpUS8nIeYZuhtqUTm_sE5_4gMOu0XAfTWu7HPQw2gTwYI1Fb-DzKhEkfRYIVaC3J86wHtmPbEIh-gy5vSq9QcpaQ_uk7ZW8xIteLgxciX0D6KJ8OdSpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"video2\",\r\n  \"videoLink\": \"https://www.video.com/video\",\r\n  \"description\": \"vidéo\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"user\": \"/api/users/28\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "video3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idvideo3\",pm.response.json().id);\r",
+							"pm.environment.set(\"video3\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTQ0MjQsImV4cCI6MTY5Nzc5ODAyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.dpDk_L3YmJC8JwR2DQZeatHcl-PeDx8z4uL8--ad4hxnQAHNj8KJvq85T7GxCkU_TtIO_oMxdnKQGQ2P56A8BjtDlKUinl9Iqery1F7RvoTB9P675_AsROihT1d91IeoD3IG2M3cpyZmiBHLDqdznCViMK1hhRG0uduLDDMiTm6lr0qVKYe5s4EevEEekvtmXaiy9D2JCzbAQSfEy3FSkSTAl19VXiehDoYpUS8nIeYZuhtqUTm_sE5_4gMOu0XAfTWu7HPQw2gTwYI1Fb-DzKhEkfRYIVaC3J86wHtmPbEIh-gy5vSq9QcpaQ_uk7ZW8xIteLgxciX0D6KJ8OdSpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"video\",\r\n  \"videoLink\": \"https://www.video.com/video\",\r\n  \"description\": \"vidéo\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"user\": \"/api/users/29\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "video4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idvideo5\",pm.response.json().id);\r",
+							"pm.environment.set(\"video5\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTgxNDYsImV4cCI6MTY5NzgwMTc0Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.KZI52ldOd3h0csAr9L1LZERZs2otWqizgzJuNIJ-VQzqoRwSvHxhQ8yUolh2Qt7_uC8tWmdlOYa3nEgYUFg59D0akbX_1m_R9iq2xhCiU-qeeT1AZx1BQberGvbyNt-kNoQn4jowTgeq3d2o3BBgWPOOa7mpVSkT7Cgrq-0EmAdO5cHHogaKxndTVXQ-6C7ByzKwLTBcBKE_NwO_O-5gh_7syddZwExwtt1Bh2Mrsu60XGVwmJdnSP7dPByv8_nu5cd5WuoGAzMzEZNGEN-XW92IJx9z_i68TiT_4JXkiDUQaKAJ_vx0UUJs1ubQXaqX7nDj1eFjIKZpvJS3mX23pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"video5\",\r\n  \"videoLink\": \"https://www.video.com/video\",\r\n  \"description\": \"vidéo\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"user\": \"/api/users/30\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "liste video",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"// pm.environment.set(\"listvideo\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"// pm.test(\"Status test\",function(){\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc4MDQzNDEsImV4cCI6MTY5NzgwNzk0MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjJAZ21haWwuY29tIn0.T7QpW3crIVvmljvzqScU--NdEkNPZNliPSaUZU89-oMPRWGxL2cIb273HCVZy676i-wRVIVzHFzCl7vZZAe-mf_MT9qARr5FefFGUOr2s2FHnO3ktQ07xpL6HH4w1txMbCwEbSfsVJLYtp9hB9obP29ZEQStJwwBW1FEUnbwT9LTNRc_Fz4hS2eiEH_eJFgA1ZRJIdxiiBvSo79rnYlbcAZzguWTs3HB4RLpjEBw1xNBmKQX3ifnoSDqyc-lT0iSKpf9e0niQIP10gPMYV7e8acMB2Xh49n-uKkqXphBcxgWxSdC2ymKlX7itVA00bPzXJghv9EUwGg-KDu8p8k58w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/videos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "watch video  2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"// pm.environment.set(\"listvideo\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"// pm.test(\"Status test\",function(){\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc4MDQzNDEsImV4cCI6MTY5NzgwNzk0MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjJAZ21haWwuY29tIn0.T7QpW3crIVvmljvzqScU--NdEkNPZNliPSaUZU89-oMPRWGxL2cIb273HCVZy676i-wRVIVzHFzCl7vZZAe-mf_MT9qARr5FefFGUOr2s2FHnO3ktQ07xpL6HH4w1txMbCwEbSfsVJLYtp9hB9obP29ZEQStJwwBW1FEUnbwT9LTNRc_Fz4hS2eiEH_eJFgA1ZRJIdxiiBvSo79rnYlbcAZzguWTs3HB4RLpjEBw1xNBmKQX3ifnoSDqyc-lT0iSKpf9e0niQIP10gPMYV7e8acMB2Xh49n-uKkqXphBcxgWxSdC2ymKlX7itVA00bPzXJghv9EUwGg-KDu8p8k58w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/videos/9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"videos",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update video 1 with put",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"pm.environment.set(\"video1\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTg1MzUsImV4cCI6MTY5NzgwMjEzNSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.kigR1tc1ukdx6lmro_GDsPTiKEboiQ0yGJiEiOceJhTWmUQPHtPqfCzVqhVIn_o77bZCh8OdUb-sijEu5NztuhgjIK0ShqQWUxNStFcLaYEml0_Ubm0kywSA4Q4ZOQgoYCmhIihTrAabUdvJu_XGHTjNshvMiIoUsPqV5UnyLRSLAJWygX4EjtHcDkrC0L7Kqc1IdD6zNJIzl5owCEzUrC8eKoV8cx5fLToHLxLraTm_7FQ8FTrL3IH71UCRFLTFuHe3DVv7eerbRZEsGeh9Ix8RusXffA3huQQYb8uggd0_ABUa2-lYTmsSUpDrIO7k5i9Gcb47qGkwZusx2LG_lQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"videommodifier\",\r\n  \"videoLink\": \"https://www.video.com/video\",\r\n  \"description\": \"vidéo\",\r\n  \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n  \"user\": \"/api/users/29\"\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos/1",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDVideo3 null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"idlastpin\",null);\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTg1MzUsImV4cCI6MTY5NzgwMjEzNSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.kigR1tc1ukdx6lmro_GDsPTiKEboiQ0yGJiEiOceJhTWmUQPHtPqfCzVqhVIn_o77bZCh8OdUb-sijEu5NztuhgjIK0ShqQWUxNStFcLaYEml0_Ubm0kywSA4Q4ZOQgoYCmhIihTrAabUdvJu_XGHTjNshvMiIoUsPqV5UnyLRSLAJWygX4EjtHcDkrC0L7Kqc1IdD6zNJIzl5owCEzUrC8eKoV8cx5fLToHLxLraTm_7FQ8FTrL3IH71UCRFLTFuHe3DVv7eerbRZEsGeh9Ix8RusXffA3huQQYb8uggd0_ABUa2-lYTmsSUpDrIO7k5i9Gcb47qGkwZusx2LG_lQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos/3",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login with admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"tokenadmin\",pm.response.json().token);\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc2MTMyNTYsImV4cCI6MTY5NzYxNjg1Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVsZXR0ZWVlQGdtYWlsLmJlIn0.3gLea_91z_tj1rpDwScgi40q-TFDOW-62qiXC7iVsdaGls5uxfu05s84awbfy1dJNaUqq95xTWrdmttrxYrhT5ZXfSjpyeC5yp7ieaUB1fY-C3i8OdbfzU52ya-FfrYa3CH9w1z45o6SePLmBBp-67Bvp0clqQiJAntaO5lwfpFlAVSCY4mSZUPkGpkd2XUjgDbG4QNeZfxWnV05yRe6fj0vKnSYIPai5oSpzCzmTuElxUUJnrR7bs6hJdWX0poCUEvJnEb3KyakfxDSaJW1DqoUXZAj6wRjhDnID7pvY1O0tHyMr2ngLfemvY0p5op06SaLwaoEQMc3KQFwFaOuyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"username\":\"uuuuuser1@gmail.com\",\r\n  \"password\": \"user\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/login_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "watch user 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"// pm.environment.set(\"listvideo\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"// pm.test(\"Status test\",function(){\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc3OTkzNDMsImV4cCI6MTY5NzgwMjk0Mywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXV1dXVzZXIxQGdtYWlsLmNvbSJ9.FcAIPltNuFFat1F1cBBztwZW1Fpy_UGgOPrGqL-cxOmUViErlukJbQR9WUnLE9EuSNAKtOttM0wXKqwopMUf7JPOOL2I32i3-N-Dgo00Prn3KGWqlkXC0-Q5lOvl2flQm9b8JnvasQN8wJR05ZDCfoIzAMJQqgtcclFflziQFGtHRS_zTdMzBcR2GYPanCpqHb2JvV7zpK_vhSaRVjSrTXxDp3kiJYs98N8ycLyeoKNM9Te9r6uekXRlprOvxdqu_uYG05a2KE5qyAyUuGJFywIUOPAcHy8FwTwqz417WOFD2_mQV6ij0dXvR5n_7ZvyaLITsnb8xFWtu4yYeZ5kiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users/4",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user1 with patch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenadmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"modifieruuuuuser1@gmail.com\",\r\n \"ROLES\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"password\": \"$2y$13$6ScQbLqpY2DB7Qu0UcUTjuFV8x6Uih2T/0qky4EOMa1aMjfFfIEKm\",\r\n  \"firstname\": \"modifierstring\",\r\n  \"lastname\": \"string\",\r\n \"createdAt\": \"2023-10-20T08:19:49.472Z\",\r\n \"updatedAt\": \"2023-10-20T08:19:49.472Z\",\r\n   \"isVerified\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDUSER2 a null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"iduser2\",null);\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenadmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/users/2",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "liste of  video",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.environment.set(\"idvideo1\",pm.response.json().id);\r",
+							"// pm.environment.set(\"listvideo\",pm.response.json().userIdentifier);\r",
+							"\r",
+							"// pm.test(\"Status test\",function(){\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenadmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/videos",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
